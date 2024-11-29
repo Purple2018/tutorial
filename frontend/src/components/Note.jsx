@@ -17,3 +17,22 @@ function Note({ note, onDelete }) {
 }
 
 export default Note
+
+// import React from "react";
+// import "../styles/Project.css"
+
+// function Project({ project, onDelete }) {
+
+//     return (
+//         <div className="project-container">
+//             <p className="project-title">{note.title}</p>
+//             <p className="project-content">{note.content}</p>
+//             <p className="project-date">{formattedDate}</p>
+//             <button className="delete-button" onClick={() => onDelete(note.id)}>
+//                 Delete
+//             </button>
+//         </div>
+//     );
+// }
+
+// export default Project

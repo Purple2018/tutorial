@@ -59,6 +59,9 @@ INSTALLED_APPS = [
     "corsheaders",
 ]
 
+#AUTH_USER_MODEL = 'Model.CustomUser'
+
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -96,14 +99,21 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv("DB_NAME"),
-        'USER': os.getenv("DB_USER"),
-        'PASSWORD': os.getenv("DB_PWD"),
-        'HOST': os.getenv("DB_HOST"),
-        'PORT': os.getenv("DB_PORT"),
-        
-    }
+       # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        # 'USER': os.getenv("DB_USER"),
+        # 'PASSWORD': os.getenv("DB_PWD"),
+        # 'HOST': os.getenv("DB_HOST"),
+        # 'PORT': os.getenv("DB_PORT"),
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': 'projectboard',  
+        'USER': 'root',  
+        'PASSWORD': ')a=hMc9YEjx.MbpPee2`2-PVmRhcG>Jm',  
+        'HOST': '127.0.0.1',  
+        'PORT': '3306',  
+    #     'OPTIONS': {  
+    #         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+     }
 }
 
 
